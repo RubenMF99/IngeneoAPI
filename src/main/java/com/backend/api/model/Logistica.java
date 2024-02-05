@@ -4,8 +4,6 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.util.Objects;
 
 @Entity
 @Table(name = "logistica")
@@ -56,35 +54,6 @@ public class Logistica {
 
     @Column(name = "idAlmacen", nullable = false)
     private Integer idAlmacen;
-    
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Logistica logistica = (Logistica) o;
-        return Objects.equals(fecharegistro, logistica.fecharegistro) &&
-                Objects.equals(fechaentrega, logistica.fechaentrega) &&
-                Objects.equals(cantidadproducto, logistica.cantidadproducto) &&
-                Objects.equals(precioenvio, logistica.precioenvio) &&
-                Objects.equals(descuento, logistica.descuento) &&
-                Objects.equals(idCliente, logistica.idCliente) &&
-                Objects.equals(idtipoproducto, logistica.idtipoproducto) &&
-                Objects.equals(idAlmacen, logistica.idAlmacen);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(
-                fecharegistro,
-                fechaentrega,
-                cantidadproducto,
-                precioenvio,
-                descuento,
-                idCliente,
-                idtipoproducto,
-                idAlmacen
-        );
-    }
 
     public Integer getId() {
         return id;
