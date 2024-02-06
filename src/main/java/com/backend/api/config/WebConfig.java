@@ -18,7 +18,7 @@ public class WebConfig {
     @Bean
     public FilterRegistrationBean<AuthFilter> authFilter() {
         FilterRegistrationBean<AuthFilter> registrationBean = new FilterRegistrationBean<>(new AuthFilter(SECRET_KEY));
-        registrationBean.addUrlPatterns("/api/admin/*");
+        registrationBean.addUrlPatterns("/api/admins/*");
         return registrationBean;
     }
 
