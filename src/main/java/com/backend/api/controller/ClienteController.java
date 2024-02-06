@@ -21,7 +21,7 @@ import java.util.Map;
 import java.util.Optional;
 
 
-@CrossOrigin(origins = "https://ingeneo-web.onrender.com")
+@CrossOrigin(originPatterns = "*" ,origins = "https://ingeneo-web.onrender.com")
 @RestController
 @RequestMapping("/api")
 public class ClienteController {

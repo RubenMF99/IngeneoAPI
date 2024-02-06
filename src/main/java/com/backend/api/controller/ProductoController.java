@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(origins = "https://ingeneo-web.onrender.com")
+@CrossOrigin(originPatterns = "*" ,origins = "https://ingeneo-web.onrender.com")
 @RestController
 @RequestMapping("/api/admin")
 public class ProductoController {
