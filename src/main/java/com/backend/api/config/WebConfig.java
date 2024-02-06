@@ -30,7 +30,8 @@ public class WebConfig {
                 registry.addMapping("/**")
                         .allowedOrigins("https://ingeneo-web.onrender.com")
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
-                        .allowCredentials(true);
+                        .allowCredentials(true)
+                        .maxAge(3600);
             }
         };
     }
