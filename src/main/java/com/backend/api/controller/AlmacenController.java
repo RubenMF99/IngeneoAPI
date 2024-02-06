@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+@CrossOrigin(origins = "https://ingeneo-web.onrender.com")
 @RestController
 @RequestMapping("/api/admin")
 public class AlmacenController {
@@ -15,10 +16,10 @@ public class AlmacenController {
 
     @PostMapping("/almacenaje")
     public ResponseEntity<Object> postAlmacen(@RequestBody Almacen almacen) {
-        if(almacen != null){
+        if (almacen != null) {
             return ResponseEntity.ok(almacenRepositorio.save(almacen));
         }
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Datos no validos" );
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Datos no validos");
     }
 
     @GetMapping("/almacenaje")
